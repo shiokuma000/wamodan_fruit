@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>おすすめ</title>
+<title>おすすめ果実</title>
 <link rel="stylesheet" href="css/wamodern.css">
 </head>
 <body>
