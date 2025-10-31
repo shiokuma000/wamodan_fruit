@@ -1,0 +1,129 @@
+@charset "UTF-8";
+/* css/wamodern.css */
+/* 和風とモダンな感じで老若男女問わず見てくれるようなデザインに */
+/* 和と相性よさそうな果物を選出 */
+
+body {
+  background-color: #fdfaf5;
+  background: linear-gradient(180deg, #fdfaf5 0%, #fffaf0 80%);
+  color: #333;
+  text-align: center;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #7b6f5a;
+  margin-bottom: 40px;
+  border-bottom: 1px solid #d8c7a3;
+  display: center;
+  padding-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+.fruit-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* 各カード全体 */
+.fruit-card {
+  background-color: #fffaf0;
+  border: 1px solid #d8c7a3;
+  border-radius: 12px; /* ← カード全体の角も丸く */
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  width: 260px;
+  text-align: center;
+}
+
+.fruit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* 画像部分 */
+.fruit-card img {
+  width: 100%;
+  height: 180px;           /* ← サイズを固定して統一 */
+  object-fit: cover;       /* ← 中央を基準にトリミング */
+  border-radius: 10px;     /* ← 角をやわらかく丸める */
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+/* テキスト */
+.fruit-card p {
+  font-size: 1.2em;
+  color: #5a4c3b;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.fruit-card .desc {
+    font-size: 0.9em;
+    color: #7b6f5a;
+    margin-top: 8px;
+    line-height: 1.3;
+}
+
+/* 切り替え */
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;             /* 画像を中央に揃える */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;          /* はみ出し防止 */
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+
+.theme-toggle:hover {
+    background-color: rgba(255,255,255,0.1); /* 軽くホバー */
+	transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+p {
+  font-size: 1.3em;
+  color: #5a4c3b;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+/*レスポンシブ*/
+@media screen and (max-width: 783px) {
+  .fruit-gallery {
+    flex-direction: column;   /* 縦並びに */
+    align-items: center;      /* 中央寄せ */
+    gap: 25px;
+  }
+
+  .fruit-card {
+    width: 80%;               /* 横幅は画面に合わせる */
+    max-width: 300px;         /* 大きすぎ防止 */
+    margin: 0 auto;           /* 中央配置 */
+  }
+
+  .fruit-card img {
+    width: 100%;              /* カード幅に合わせる */
+    aspect-ratio: 1 / 1;      /* ← 正方形にする！ */
+    object-fit: cover;        /* 中央トリミング */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+  }
+}
+
+}
