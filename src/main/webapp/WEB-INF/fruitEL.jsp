@@ -5,10 +5,14 @@
 <head>
 <meta charset="UTF-8">
 <title>おすすめ果実</title>
-<link rel="stylesheet" href="css/wamodern.css">
+<link id="theme-stylesheet" rel="stylesheet" href="css/wamodarn.css">
 </head>
 <body>
 <h1>今月のおすすめ</h1>
+
+   <!-- テーマ切替アイコン -->
+	<span class="theme-toggle" style="cursor:pointer; font-size:24px;">❂</span>
+
 
 <div class="fruit-gallery">
    <!-- JSTLでリストを繰り返し出力 -->
@@ -20,8 +24,10 @@
        </div>
    </c:forEach>
 </div>
+
 <footer>
   <small>Images: Pixabay</small>
 </footer>
+<script src="jS/change.js"></script>
 </body>
 </html>
