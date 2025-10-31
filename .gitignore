@@ -25,3 +25,5 @@ Thumbs.db
 # === Config / Secrets ===
 .env
 *.properties
+
+*.sql
