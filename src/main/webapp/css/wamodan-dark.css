@@ -1,0 +1,123 @@
+@charset "UTF-8";
+/* 夜の和モダン・深緑透過カードバージョン */
+
+body {
+  background: linear-gradient(180deg, #003300 0%, #001a00 80%);
+  color: #fdfaf5;
+  text-align: center;
+  font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
+  padding-top: 80px;
+}
+
+h1 {
+  font-size: 2em;
+  color: #f5deb3;
+  border-bottom: 1px solid #c2a878;
+  margin-bottom: 40px;
+  padding-bottom: 6px;
+  letter-spacing: 0.05em;
+}
+
+/* ギャラリー */
+.fruit-gallery {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 30px;
+}
+
+/* 深緑半透明カード */
+.fruit-card {
+  background-color: rgba(0, 40, 0, 0.7);
+  border: 1px solid #c2a878;
+  border-radius: 12px;
+  padding: 20px 25px;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.08);
+  width: 260px;
+  text-align: center;
+  color: #fdfaf5;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.fruit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.15);
+}
+
+/* 画像 */
+.fruit-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+  margin-bottom: 15px;
+}
+
+/* テキスト */
+.fruit-card p {
+  font-size: 1.2em;
+  letter-spacing: 0.05em;
+  margin: 0;
+}
+
+.fruit-card .desc {
+  font-size: 0.9em;
+  color: #f5deb3;
+  margin-top: 8px;
+  line-height: 1.4;
+}
+
+/* 切り替え */
+.theme-toggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;             /* 画像を中央に揃える */
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;          /* はみ出し防止 */
+    background-color: transparent;
+    transition: background-color 0.2s;
+}
+
+
+.theme-toggle:hover {
+    background-color: rgba(255,255,255,0.1); /* 軽くホバー */
+	transform: scale(1.2);
+    transition: transform 0.3s ease;
+}
+
+p {
+  font-size: 1.3em;
+  color: #fdfaf5;
+}
+
+/*レスポンシブ*/
+@media screen and (max-width: 783px) {
+  .fruit-gallery {
+    flex-direction: column;   /* 縦並びに */
+    align-items: center;      /* 中央寄せ */
+    gap: 25px;
+  }
+
+  .fruit-card {
+    width: 80%;               /* 横幅は画面に合わせる */
+    max-width: 300px;         /* 大きすぎ防止 */
+    margin: 0 auto;           /* 中央配置 */
+  }
+
+  .fruit-card img {
+    width: 100%;              /* カード幅に合わせる */
+    aspect-ratio: 1 / 1;      /* ← 正方形にする！ */
+    object-fit: cover;        /* 中央トリミング */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    margin-bottom: 15px;
+  }
+}
