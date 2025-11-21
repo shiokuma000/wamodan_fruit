@@ -15,11 +15,11 @@ public class Fruit implements Serializable{
 			this.desc = desc;
 			this.image = image;
 	}
-		
+
 	// --- Getter（JSPのEL式やDAOから参照される） ---
 	public String getName() {return name;}
 	public int getPrice() {return price;}
 	public String getDesc() { return desc; }
 	public String getImage() {return image;}
-	
-}	
+
+}

@@ -1,12 +1,9 @@
 @charset "UTF-8";
-/* css/wamodern.css */
-/* 和風とモダンな感じで老若男女問わず見てくれるようなデザインに */
-/* 和と相性よさそうな果物を選出 */
+/* 夜の和モダン・深緑透過カードバージョン */
 
 body {
-  background-color: #fdfaf5;
-  background: linear-gradient(180deg, #fdfaf5 0%, #fffaf0 80%);
-  color: #333;
+  background: linear-gradient(180deg, #003300 0%, #001a00 80%);
+  color: #fdfaf5;
   text-align: center;
   font-family: "Yu Mincho", "Hiragino Mincho ProN", serif;
   padding-top: 80px;
@@ -14,56 +11,63 @@ body {
 
 h1 {
   font-size: 2em;
-  color: #7b6f5a;
+  color: #f5deb3;
+  border-bottom: 1px solid #c2a878;
   margin-bottom: 40px;
-  border-bottom: 1px solid #d8c7a3;
-  display: center;
   padding-bottom: 6px;
   letter-spacing: 0.05em;
 }
 
+/* ギャラリー */
 .fruit-gallery {
   display: flex;
   justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
+  gap: 40px;
   margin-top: 30px;
 }
 
-/* 各カード全体 */
+/* 深緑半透明カード */
 .fruit-card {
   position: relative;
-  background-color: #fffaf0;
-  border: 1px solid #d8c7a3;
-  border-radius: 12px; /* ← カード全体の角も丸く */
+  background-color: rgba(0, 40, 0, 0.7);
+  border: 1px solid #c2a878;
+  border-radius: 12px;
   padding: 20px 25px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 10px rgba(255,255,255,0.08);
   width: 260px;
   text-align: center;
+  color: #fdfaf5;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
 .fruit-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(255,255,255,0.15);
 }
 
-/* 画像部分 */
+/* 画像 */
 .fruit-card img {
   width: 100%;
-  height: 180px;           /* ← サイズを固定して統一 */
-  object-fit: cover;       /* ← 中央を基準にトリミング */
-  border-radius: 10px;     /* ← 角をやわらかく丸める */
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.08);
   margin-bottom: 15px;
 }
 
 /* テキスト */
 .fruit-card p {
-  font-size: 1.05rem;
-  color: #5a4c3b;
+  font-size: 1.2em;
   letter-spacing: 0.05em;
   margin: 0;
+}
+
+.fruit-card .desc {
+  font-size: 0.9em;
+  color: #f5deb3;
+  margin-top: 8px;
+  line-height: 1.4;
 }
 
 /* 追加フォーム全体を右端に配置 */
@@ -72,9 +76,9 @@ h1 {
     position: absolute;       /* ページ上の右端に固定配置 */
     top: 180px;                /* 上からの余白 */
     right: 40px;              /* 右からの余白 */
-    background: rgba(255, 255, 255, 0.3); /* 透過 */
+    background: rgba(255, 255, 255, 0.15); /* 透過 */
     padding: 6px;            /* 内側余白 */
-    border: 1px solid #ccc;   /* 枠線 */
+    border: 1px solid #f5deb3;   /* 枠線 */
     border-radius: 8px;       /* 角丸 */
     box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 軽い影 */
 }
@@ -93,7 +97,7 @@ h1 {
 .add-btn {
     border: 1px solid gray;     /* 枠線 */
     background: transparent;     /* 背景は透明 */
-    color: gray;                 /* 文字色 */
+    color: #f5deb3;                 /* 文字色 */
     border-radius: 4px;          /* 角丸 */
     padding: 6px 12px;           /* ボタン内余白 */
     cursor: pointer;
@@ -102,7 +106,7 @@ h1 {
 }
 
 .add-btn:hover {
-    background: gray;         /* ホバー時にグレー */
+    background: #808000;
     color: #fff;
     transform: translateY(-1px); /* 少し浮かせる */
 }
@@ -117,9 +121,9 @@ h1 {
 }
 
 .delete-btn {
-    border: 1px solid gray;
+    border: 1px solid #fff;
     background: transparent;
-    color: gray;
+    color: #fff;
     border-radius: 50%;      /* 角丸100%で丸ボタンに */
     width: 18px;
     height: 18px;
@@ -162,34 +166,9 @@ h1 {
     transition: transform 0.3s ease;
 }
 
-/* 切り替え */
-.theme-toggle {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 25px;
-    height: 25px;
-    border-radius: 50%;
-    cursor: pointer;
-    display: flex;             /* 画像を中央に揃える */
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;          /* はみ出し防止 */
-    background-color: transparent;
-    transition: background-color 0.2s;
-}
-
-
-.theme-toggle:hover {
-    background-color: rgba(255,255,255,0.1); /* 軽くホバー */
-	transform: scale(1.2);
-    transition: transform 0.3s ease;
-}
 p {
   font-size: 1.3em;
-  color: #5a4c3b;
-  letter-spacing: 0.05em;
-  margin: 0;
+  color: #fdfaf5;
 }
 
 /*レスポンシブ*/
@@ -214,6 +193,4 @@ p {
     box-shadow: 0 0 10px rgba(0,0,0,0.08);
     margin-bottom: 15px;
   }
-}
-
 }

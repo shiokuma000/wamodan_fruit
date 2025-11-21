@@ -15,14 +15,33 @@
 
 
 <div class="fruit-gallery">
-   <!-- JSTLでリストを繰り返し出力 -->
    <c:forEach var="fruit" items="${fruits}">
        <div class="fruit-card">
+           <!-- 削除ボタンを右上に配置 -->
+           <form action="AddFruitServlet" method="POST" class="delete-form">
+               <input type="hidden" name="action" value="delete">
+               <input type="hidden" name="name" value="${fruit.name}">
+               <button type="submit" class="delete-btn">×</button>
+           </form>
+
            <img src="${fruit.image}" alt="${fruit.name}">
            <p>${fruit.name} — ${fruit.price}円</p>
            <p class="desc">${fruit.desc}</p>
        </div>
    </c:forEach>
+</div>
+
+<!-- --- 追加フォーム --- -->
+<div class="fruit-form">
+    <h2>果物を追加する</h2>
+    <form action="AddFruitServlet" method="POST">
+    	<input type="hidden" name="action" value="add">
+        <input type="text" name="name" placeholder="果物の名前" required><br>
+        <input type="number" name="price" placeholder="価格" required><br>
+        <input type="text" name="desc" placeholder="説明" required><br>
+        <input type="text" name="image" placeholder="画像URL" required><br>
+        <button type="submit" class="add-btn">追加</button>
+    </form>
 </div>
 
 <footer>

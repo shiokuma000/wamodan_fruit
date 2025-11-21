@@ -7,12 +7,12 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentTheme = localStorage.getItem('theme') || 'light';
 
     // 初期読み込み時に適用
-    stylesheet.href = currentTheme === 'dark' ? 'css/mattya.css' : 'css/wamodern.css';
+    stylesheet.href = currentTheme === 'dark' ? 'css/wamodan-dark.css' : 'css/wamodern.css';
 
     toggle.addEventListener('click', () => {
         if(stylesheet.href.includes('wamodern.css')) {
             // ダークテーマに切替
-            stylesheet.href = 'css/mattya.css';
+            stylesheet.href = 'css/wamodan-dark.css';
             localStorage.setItem('theme', 'dark');
         } else {
             // ライトテーマに戻す
