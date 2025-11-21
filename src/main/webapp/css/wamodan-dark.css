@@ -29,6 +29,7 @@ h1 {
 
 /* 深緑半透明カード */
 .fruit-card {
+  position: relative;
   background-color: rgba(0, 40, 0, 0.7);
   border: 1px solid #c2a878;
   border-radius: 12px;
@@ -67,6 +68,78 @@ h1 {
   color: #f5deb3;
   margin-top: 8px;
   line-height: 1.4;
+}
+
+/* 追加フォーム全体を右端に配置 */
+.fruit-form {
+    width: 180px;             /* フォーム幅 */
+    position: absolute;       /* ページ上の右端に固定配置 */
+    top: 180px;                /* 上からの余白 */
+    right: 40px;              /* 右からの余白 */
+    background: rgba(255, 255, 255, 0.15); /* 透過 */
+    padding: 6px;            /* 内側余白 */
+    border: 1px solid #f5deb3;   /* 枠線 */
+    border-radius: 8px;       /* 角丸 */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 軽い影 */
+}
+
+/* 各フォーム要素の間隔を少し空ける */
+.fruit-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 5px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+/* 追加ボタン */
+.add-btn {
+    border: 1px solid gray;     /* 枠線 */
+    background: transparent;     /* 背景は透明 */
+    color: #f5deb3;                 /* 文字色 */
+    border-radius: 4px;          /* 角丸 */
+    padding: 6px 12px;           /* ボタン内余白 */
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+
+.add-btn:hover {
+    background: #808000;
+    color: #fff;
+    transform: translateY(-1px); /* 少し浮かせる */
+}
+
+
+
+/* 削除ボタン */
+.delete-form {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+.delete-btn {
+    border: 1px solid #fff;
+    background: transparent;
+    color: #fff;
+    border-radius: 50%;      /* 角丸100%で丸ボタンに */
+    width: 18px;
+    height: 18px;
+    cursor: pointer;
+    font-weight: bold;
+    display: flex;
+    align-items: center;     /* 縦中央 */
+    justify-content: center; /* 横中央 */
+    padding: 0;
+    font-size: 12px;
+}
+
+
+.delete-btn:hover {
+    background-color: gray;
+    color: #fff;
 }
 
 /* 切り替え */
