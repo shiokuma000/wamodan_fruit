@@ -17,6 +17,14 @@ import model.Fruit;
 public class FruitServlet extends HttpServlet {
     private static final long serialVersionUID = 1L;
 
+ // --- サーブレット初期化時に DB 初期化 ---
+    @Override
+    public void init() throws ServletException {
+        super.init();
+        // DB がまだ作られていなければ初期化
+        model.DBInit.initialize();
+    }
+
     // --- GETリクエスト処理 ---
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {

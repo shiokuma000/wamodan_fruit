@@ -11,8 +11,6 @@
 *.log
 
 # === IDE / Environment ===
-/.classpath
-/.project
 /.settings/
 /.idea/
 /.vscode/
@@ -28,3 +26,7 @@ Thumbs.db
 
 *.sql
 *.txt
+
+/data/
+*.db
+
