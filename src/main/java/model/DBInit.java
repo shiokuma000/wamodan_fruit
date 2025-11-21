@@ -8,12 +8,12 @@ import java.sql.Statement;
 
 public class DBInit {
 
-    // --- DB 接続 ---
-    private static Connection getConnection() throws Exception {
-        Class.forName("org.h2.Driver");
-        // プロジェクト直下 data フォルダ内 DB を使用
-        return DriverManager.getConnection("jdbc:h2:./data/wamodan;AUTO_SERVER=TRUE", "sa", "");
-    }
+	// --- DB 接続 ---
+	public static Connection getConnection() throws SQLException, ClassNotFoundException {
+	    Class.forName("org.h2.Driver");
+	    //プロジェクト直下 data フォルダ内 DB を使用
+	    return DriverManager.getConnection("jdbc:h2:./data/wamodan;AUTO_SERVER=TRUE", "sa", "");
+	}
 
     public static void initialize() {
         try (Connection conn = getConnection();
