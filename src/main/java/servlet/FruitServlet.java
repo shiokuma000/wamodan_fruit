@@ -22,7 +22,7 @@ public class FruitServlet extends HttpServlet {
     public void init() throws ServletException {
         super.init();
         // DB がまだ作られていなければ初期化
-        model.DBInit.initialize();
+        //model.DBInit.initialize();
     }
 
     // --- GETリクエスト処理 ---

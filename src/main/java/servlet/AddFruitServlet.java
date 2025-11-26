@@ -40,9 +40,6 @@ public class AddFruitServlet extends HttpServlet {
 
         	response.sendRedirect("FruitServlet");
         }
-
-
-
     }
 
 
