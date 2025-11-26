@@ -6,31 +6,43 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.sql.Statement;
 
+
 public class DBInit {
 
-	// --- DB 接続 ---
-	public static Connection getConnection() throws SQLException, ClassNotFoundException {
-	    Class.forName("org.h2.Driver");
-	    //プロジェクト直下 data フォルダ内 DB を使用
-	    return DriverManager.getConnection("jdbc:h2:./data/wamodan;AUTO_SERVER=TRUE", "sa", "");
-	}
+	// アプリケーション全体で使う DB パス
+    public static String dataFolderPath;
+
+    // --- DB 接続 ---
+    public static Connection getConnection() throws SQLException, ClassNotFoundException {
+
+        Class.forName("org.h2.Driver");
+        // 絶対パスを使うように変更
+        String dbPath = dataFolderPath + "/wamodan";
+        return DriverManager.getConnection("jdbc:h2:" + dbPath + ";AUTO_SERVER=TRUE", "sa", "");
+
+        // プロジェクト直下 data フォルダ内 DB を使用
+//        return DriverManager.getConnection("jdbc:h2:./data/wamodan;AUTO_SERVER=TRUE", "sa", "");
+    }
+
+
 
     public static void initialize() {
+
         try (Connection conn = getConnection();
              Statement stmt = conn.createStatement()) {
 
-            // --- FRUIT テーブル作成（NAME に UNIQUE 制約追加） ---
+            // --- FRUIT テーブル作成 ---
             String sqlFruitTable =
                 "CREATE TABLE IF NOT EXISTS FRUIT (" +
                 "ID INT AUTO_INCREMENT PRIMARY KEY, " +
-                "NAME VARCHAR(50) UNIQUE, " +  // ← 名前の重複をDB側で防ぐ
+                "NAME VARCHAR(50) UNIQUE, " +
                 "PRICE INT, " +
                 "DESC_TEXT VARCHAR(200), " +
                 "IMAGE VARCHAR(200)" +
                 ")";
             stmt.execute(sqlFruitTable);
 
-            // --- 初期データ挿入（PreparedStatement 利用） ---
+            // --- 初期データ挿入 ---
             insertIfNotExists(conn, "いちご", 470, "甘くジューシーで中毒性最強。", "images/itigo.jpg");
             insertIfNotExists(conn, "みかん", 430, "爽やかな口当たりの人気者。", "images/mikan.jpg");
             insertIfNotExists(conn, "マスカット", 520, "控えめなのに抜群の存在感。", "images/masukatto.jpg");

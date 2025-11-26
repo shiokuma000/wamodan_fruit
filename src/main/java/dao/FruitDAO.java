@@ -16,7 +16,6 @@ import model.Fruit;
 public class FruitDAO {
 
     // --- 定数（接続設定） ---
-    // 相対パスに変更して、プロジェクト直下の data フォルダ内 DB に接続
     private static final String JDBC_URL = "jdbc:h2:./data/wamodan";
     private static final String DB_USER = "sa";
     private static final String DB_PASS = "";
@@ -24,6 +23,7 @@ public class FruitDAO {
     // --- 全件取得メソッド ---
     public List<Fruit> findAll() {
         List<Fruit> fruits = new ArrayList<>();
+        String sql = "SELECT NAME, PRICE, DESC_TEXT, IMAGE FROM FRUIT";
 
         try {
             // --- ドライバ登録 ---
@@ -34,13 +34,11 @@ public class FruitDAO {
         }
 
         // try-with-resources で自動クローズ
-        String sql = "SELECT NAME, PRICE, DESC_TEXT, IMAGE FROM FRUIT";
 
         try (Connection conn = DriverManager.getConnection(JDBC_URL, DB_USER, DB_PASS);
-             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+             PreparedStatement pstmt = conn.prepareStatement(sql);
+             ResultSet rs = pstmt.executeQuery()) {
 
-            // SQL 実行
-            ResultSet rs = pstmt.executeQuery();
 
             // 結果セットを1行ずつ処理
             while (rs.next()) {
@@ -56,5 +54,37 @@ public class FruitDAO {
         }
 
         return fruits;
+    }
+
+    //---追加---
+    public void  addFruit(Fruit fruit) {
+    	String  sql = "INSERT INTO FRUIT(NAME,PRICE,DESC_TEXT,IMAGE)" +
+    				  "SELECT ?,?,?,?" +
+    				  "WHERE NOT EXISTS (SELECT * FROM FRUIT WHERE NAME = ?)";
+    	try (Connection conn = DriverManager.getConnection(JDBC_URL,DB_USER,DB_PASS);
+    		 PreparedStatement pstmt = conn.prepareStatement(sql)){
+
+    		pstmt.setString(1, fruit.getName());
+    		pstmt.setInt(2, fruit.getPrice());
+    		pstmt.setString(3,fruit.getDesc());
+    		pstmt.setString(4,fruit.getImage());
+    		pstmt.setString(5, fruit.getName());
+    		pstmt.executeUpdate();
+    	}	catch (SQLException e) {
+    		e.printStackTrace();
+    	}
+    }
+
+    //---削除---
+    public void  deleteFruit(String name) {
+    	String sql = "DELETE FROM FRUIT WHERE NAME = ?";
+    	try (Connection conn = DriverManager.getConnection(JDBC_URL,DB_USER,DB_PASS);
+       		 PreparedStatement pstmt = conn.prepareStatement(sql)){
+
+    		pstmt.setString(1, name);
+    		pstmt.executeUpdate();
+    	} catch (SQLException e) {
+    		e.printStackTrace();
+    	}
     }
 }
