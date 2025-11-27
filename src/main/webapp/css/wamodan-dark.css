@@ -78,7 +78,7 @@ h1 {
     left: 50%;                /* 画面の横幅の中央 */
     transform: translate(-50%, -50%); /* 自身の大きさ分ずらして本当の中央へ */
 
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255);
     padding: 6px;
     border: 1px solid #ccc;
     border-radius: 8px;
@@ -98,6 +98,7 @@ h1 {
     height: 40px;
     cursor: pointer;
 }
+
 
 
 /* 各フォーム要素の間隔を少し空ける */
