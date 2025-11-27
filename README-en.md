@@ -58,8 +58,7 @@ Users can add new fruits or remove existing ones.
 4. How to Use
 
 - **Toggle** → Click the 【❂】 at the top right to switch between light mode and dark mode.  
-- **Add** → Register a fruit by entering its name, price, description, and image in the form at the right end.  
-
+- **Add** → Click the [+] mark in the upper left corner and enter the name, price, description, and image in the form that appears to perform the additional process.
   (Please use images from the `images` folder. Example: `images/cherry.jpg`)
 
 - **Delete** → Click the 【×】 at the top right of the image to remove it.
@@ -151,6 +150,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
