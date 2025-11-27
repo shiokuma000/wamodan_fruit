@@ -38,7 +38,7 @@ Users can add new fruits or remove existing ones.
 | Feature | Description |
 |--------|------------|
 | 🍎 Add Fruit | Register a fruit with name, price, desc and image price via a form |
-| 📋 List View | View all data in a clean table format |
+| 📋 List View | View all data in a clean format |
 | ❌ Delete | Easily remove a fruit by specifying its name |
 | 🧩 Three-Layer Structure | Maintains code with MVC and PRG patterns |
 
@@ -143,6 +143,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
