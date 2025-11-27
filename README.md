@@ -107,11 +107,12 @@ FRUIT
 
 ## 🚀 動作例（横並び・クリックで拡大）
 
-| 切り替え | 追加 | 削除 |
-|-----------|------|------|
-| [<img src="assets/toggle.GIF" width="200" />](assets/toggle.GIF) | [<img src="assets/add.GIF" width="200" />](assets/add.GIF) | [<img src="assets/delete.GIF" width="200" />](assets/delete.GIF) |
+| 切り替え &nbsp;&nbsp;| 追加 &nbsp;&nbsp;| 削除 &nbsp;&nbsp;|
+|----------------------|-----------------|-----------------|
+| [<img src="assets/toggle.GIF" width="200" />](assets/toggle.GIF) &nbsp;&nbsp;| [<img src="assets/add.GIF" width="200" />](assets/add.GIF) &nbsp;&nbsp;| [<img src="assets/delete.GIF" width="200" />](assets/delete.GIF) &nbsp;&nbsp;|
 
 ※画像をクリックすると拡大表示されます。
+
 
 ---
 
