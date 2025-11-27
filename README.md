@@ -117,9 +117,9 @@ FRUIT
 
 ## 🚀 動作例
 
-| 切り替え |   | 追加 |   | 削除 |
+| 切り替え |   | 削除 |
 |-----------|---|------|---|------|
-| <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/add.GIF" width="280" /> |   | <img src="assets/delete.GIF" width="300" /> |
+| <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/delete.GIF" width="300" /> |
 
 
 ---
