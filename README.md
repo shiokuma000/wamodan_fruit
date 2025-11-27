@@ -106,7 +106,7 @@ FRUIT
 
 | 切り替え |   | 追加 |   | 削除 |
 |-----------|---|------|---|------|
-| <img src="assets/toggle.GIF" style="transform: scale(1.5); transform-origin: center; display:block" width="250" /> |   | <img src="assets/add.GIF" width="250" /> |   | <img src="assets/delete.GIF" width="300" /> |
+| <img src="assets/toggle.GIF" style="transform: scale(1.5); display:block" width="250" /> |   | <img src="assets/add.GIF" width="250" /> |   | <img src="assets/delete.GIF" width="300" /> |
 
 ※画像をクリックすると拡大表示されます。
 
