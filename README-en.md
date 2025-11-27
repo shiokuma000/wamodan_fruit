@@ -1,4 +1,9 @@
 # 🍏 WamodanFruit – Fruit Management App
+
+🌏 Language Switch: [日本語](README.md) | [English](README-en.md)
+
+※Some parts may be hard to read due to translation.
+
 ---
 
 ## 👩‍💻 Technologies Used
@@ -138,3 +143,4 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
