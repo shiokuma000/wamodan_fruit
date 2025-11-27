@@ -69,13 +69,14 @@ Users can add new fruits or remove existing ones.
 
 ---
 
-## 🔄 Future Improvements
+## 🔄 Improvements & Future Tasks
 
 | Item | Details |
 |------|--------|
-| 🍏 Edit Function | Add the ability to edit registered fruits |
-| 🔍 Search | Filter by name or color |
-| 📦 Categories | Add a category table for many-to-one relationships |
+| 🍏 Edit Function | Plan to add the ability to edit registered fruits |
+| 🔍 Search | Improve to allow filtering by name or color |
+| 📸 Upload Improvements | Enable image uploads in file format |
+
 
 ---
 
@@ -142,6 +143,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
