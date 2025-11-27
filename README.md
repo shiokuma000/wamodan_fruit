@@ -61,7 +61,7 @@ FruitManage は、果物の **登録・一覧・削除** を中心にした
 | Controller | 画面遷移とリクエストの振り分けのみを担当 |
 | Model | バリデーションと処理ロジックを集約 |
 | DAO | PreparedStatement で SQL を安全に実行 |
-| DB | シンプルな fruit テーブルで管理 |
+| DB | シンプルな FRUIT テーブルで管理 |
 | View | JSP で最小限のフォーム・一覧を構築 |
 
 ---
