@@ -71,9 +71,15 @@ Web アプリの基礎構造を理解しながら実装できる教材として�
 
 ## 🗄️ ER 図 (テキスト版)
 
+
 FRUIT
+
 ├─ ID INT AUTO_INCREMENT (PK)
+
 ├─ NAME VARCHAR(50) UNIQUE
+
 ├─ PRICE INT
+
 ├─ DESC_TEXT VARCHAR(200)
+
 └─ IMAGE VARCHAR(200)
