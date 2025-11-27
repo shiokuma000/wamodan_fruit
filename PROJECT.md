@@ -24,10 +24,16 @@
 <summary>drawio</summary>
 
 - `add.png`
+- `db.png`
 - `delete.png`
 - `index.png`
 
 </details>
+
+- `ADD.md`
+- `DBInit.md`
+- `DELETE.md`
+- `INDEX.md`
 
 </details>
 
