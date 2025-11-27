@@ -118,8 +118,6 @@ FRUIT
 |--------|---|-----|---|--------|
 | <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/add.GIF" width="280" /> |   | <img src="assets/delete.GIF" width="300" /> |
 
-*Click images to enlarge.*
-
 ---
 
 ## 💡 License & Copyright
@@ -153,6 +151,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
