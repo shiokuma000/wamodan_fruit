@@ -42,6 +42,8 @@
 ### 5. 処理フロー図
 [![一覧表示図](drawio/index.png)](drawio/index.png)
 
+※ 画像をクリックすると拡大表示されます。
+
 **色分け情報：**  
 - Controller → 赤 
 - Model → 青  
