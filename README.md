@@ -44,7 +44,7 @@ FruitManage は、果物の **登録・一覧・削除** を中心にした
 ## 🚀 セットアップ
 
 1. このリポジトリを clone  
-   `git clone `
+   `git clone  https://github.com/shiokuma000/wamodan_fruit.git `
 
 2. Eclipseなどへインポート  
    → ** `FruitServlet`を選択して Tomcat で実行**
