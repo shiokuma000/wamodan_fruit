@@ -85,7 +85,7 @@ Users can add new fruits or remove existing ones.
 |------|--------|
 | 🍏 Edit Function | Plan to add the ability to edit registered fruits |
 | 🔍 Search | Improve to allow filtering by name or color |
-| 📸 Upload Improvements | Enable image uploads in file format |
+| 📸 Upload Improvements | Uploads will be possible via file format in the future (currently via URL) |
 
 
 ---
@@ -151,6 +151,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
