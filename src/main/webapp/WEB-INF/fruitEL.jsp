@@ -31,11 +31,14 @@
    </c:forEach>
 </div>
 
-<!-- --- 追加フォーム --- -->
-<div class="fruit-form">
+<!-- プラスボタン -->
+<button class="plus-btn" id="toggleAddForm">＋</button>
+
+<!-- --- 追加フォーム（最初は非表示） --- -->
+<div class="fruit-form" id="addForm" style="display: none;">
     <h2>果物を追加する</h2>
     <form action="AddFruitServlet" method="POST">
-    	<input type="hidden" name="action" value="add">
+        <input type="hidden" name="action" value="add">
         <input type="text" name="name" placeholder="果物の名前" required><br>
         <input type="number" name="price" placeholder="価格" required><br>
         <input type="text" name="desc" placeholder="説明" required><br>
@@ -43,6 +46,7 @@
         <button type="submit" class="add-btn">追加</button>
     </form>
 </div>
+
 
 <footer>
   <small>Images: Pixabay</small>

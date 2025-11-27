@@ -21,3 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
+
+document.getElementById("toggleAddForm").addEventListener("click", function () {
+    const form = document.getElementById("addForm");
+    form.style.display = (form.style.display === "none") ? "block" : "none";
+});
