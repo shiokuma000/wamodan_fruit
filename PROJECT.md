@@ -11,7 +11,6 @@
 <details>
 <summary>👜assets</summary>
 
-- `add.GIF`
 - `delete.GIF`
 - `toggle.GIF`
 
