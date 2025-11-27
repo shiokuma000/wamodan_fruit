@@ -1,7 +1,5 @@
 # 🍏 WamodanFruit – 果物管理アプリ
 
----
-
 🌏 言語切替: [日本語](README.md) | [English](README-en.md)
 
 ---
