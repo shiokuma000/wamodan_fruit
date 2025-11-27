@@ -113,9 +113,9 @@ FRUIT
 
 ## 🚀 Demo
 
-| Toggle |   | Add |   | Delete |
-|--------|---|-----|---|--------|
-| <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/add.GIF" width="280" /> |   | <img src="assets/delete.GIF" width="300" /> |
+| Toggle |   | Delete |
+|--------|---|--------|
+| <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/delete.GIF" width="300" /> |
 
 ---
 
@@ -150,6 +150,7 @@ Many thanks to the photographers for their wonderful images.
 
 To everyone who offered insights during my learning, and to those viewing this project,  
 a small token of my gratitude.
+
 
 
 
