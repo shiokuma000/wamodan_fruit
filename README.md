@@ -121,8 +121,6 @@ FRUIT
 |-----------|---|------|---|------|
 | <img src="assets/toggle.GIF" width="350" /> |   | <img src="assets/add.GIF" width="280" /> |   | <img src="assets/delete.GIF" width="300" /> |
 
-※画像をクリックすると拡大表示されます。
-
 
 ---
 
