@@ -104,10 +104,10 @@ FRUIT
 ## 📚 Project Structure & Documentation
 
 - [🪄 Project Structure](PROJECT.md)  
-- [🔑 List View Design Document](document/INDEX.md)  
-- [📝 Add Fruit Design Document](document/ADD.md)  
-- [✏️ Delete Fruit Design Document](document/DELETE.md)  
-- [🌗 SQL Initialization Design Document](document/DBInit.md)  
+- [🔑 List View Design Document](docs/INDEX.md)  
+- [📝 Add Fruit Design Document](docs/ADD.md)  
+- [✏️ Delete Fruit Design Document](docs/DELETE.md)  
+- [🌗 SQL Initialization Design Document](docs/DBInit.md)  
 
 ---
 
