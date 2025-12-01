@@ -109,10 +109,10 @@ FRUIT
 ## 📚 プロジェクト構成・設計書一覧
 
 - [🪄 プロジェクト構成](PROJECT.md)
-- [🔑 一覧表示処理設計書](document/INDEX.md)  
-- [📝 追加処理設計書](document/ADD.md)   
-- [✏️ 削除処理設計書](document/DELETE.md)  
-- [🌗 SQL初期化処理設計書](document/DBInit.md)    
+- [🔑 一覧表示処理設計書](docs/INDEX.md)  
+- [📝 追加処理設計書](docs/ADD.md)   
+- [✏️ 削除処理設計書](docs/DELETE.md)  
+- [🌗 SQL初期化処理設計書](docs/DBInit.md)    
 
 ---
 
